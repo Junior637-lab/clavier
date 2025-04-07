@@ -1,0 +1,96 @@
+body{
+    background-color: black;
+    margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+}
+#output{
+    width: 60%;
+    height:20%;
+    padding: 12px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    
+}
+
+
+.keyboard {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 15px;
+    ;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    user-select: none;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-bottom: 10px;
+  }
+  
+  .key {
+    padding: 15px;
+    margin: 4px;
+    min-width: 40px;
+    text-align: center;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .key:hover {
+    background-color: #d0d0d0;
+  }
+  .backspace:hover,
+  .capslock:hover,
+  .shift:hover,
+  .space:hover,
+  .enter:hover,
+  .tab:hover {
+    background-color: #d0d0d0;
+  }
+  
+  
+  .space {
+    flex: 5;
+    min-width: 300px;
+  }
+  
+  .backspace,
+  .enter,
+  .tab,
+  .capslock,
+  .shift {
+    background-color: #ccc;
+    min-width: 60px;
+    font-weight: bold;
+  }
+  .space,
+  .shift,
+  .capslock,
+  .enter,
+  .tab,
+  .backspace{
+
+    padding: 15px;
+    margin: 4px;
+    min-width: 40px;
+    text-align: center;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+  }

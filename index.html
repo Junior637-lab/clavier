@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="keyboard">
+        
+        <div class="row">
+          <button class="key">²</button>
+          <button class="key">1</button>
+          <button class="key">2</button>
+          <button class="key">3</button>
+          <button class="key">4</button>
+          <button class="key">5</button>
+          <button class="key">6</button>
+          <button class="key">7</button>
+          <button class="key">8</button>
+          <button class="key">9</button>
+          <button class="key">0</button>
+          <button class="key">)</button>
+          <button class="key">=</button>
+          <button class="backspace">⌫</button>
+        </div>
+      
+        
+        <div class="row">
+          <button class="tab">↹</button>
+          <button class="key">A</button>
+          <button class="key">Z</button>
+          <button class="key">E</button>
+          <button class="key">R</button>
+          <button class="key">T</button>
+          <button class="key">Y</button>
+          <button class="key">U</button>
+          <button class="key">I</button>
+          <button class="key">O</button>
+          <button class="key">P</button>
+          <button class="key">^</button>
+          <button class="key">$</button>
+          <button class="enter">⏎</button>
+        </div>
+      
+        
+        <div class="row">
+          <button class="capslock">⇪</button>
+          <button class="key">Q</button>
+          <button class="key">S</button>
+          <button class="key">D</button>
+          <button class="key">F</button>
+          <button class="key">G</button>
+          <button class="key">H</button>
+          <button class="key">J</button>
+          <button class="key">K</button>
+          <button class="key">L</button>
+          <button class="key">M</button>
+          <button class="key">ù</button>
+          <button class="key">*</button>
+        </div>
+      
+        
+        <div class="row">
+          <button class="shift">⇧</button>
+          <button class="key">W</button>
+          <button class="key">X</button>
+          <button class="key">C</button>
+          <button class="key">V</button>
+          <button class="key">B</button>
+          <button class="key">N</button>
+          <button class="key">,</button>
+          <button class="key">;</button>
+          <button class="key">:</button>
+          <button class="key">!</button>
+          <button class="shift">⇧</button>
+        </div>
+      
+        
+        <div class="row">
+          <button class="space">␣</button>
+        </div>
+      </div>
+      <input type="text" id="output" placeholder="Tape ici avec le clavier virtuel" >
+
+      <script>
+        let espace=document.querySelector(".space");
+     let key=document.querySelectorAll(".key").value;
+     let shift=document.querySelector(" .shift").value;
+     let input=document.getElementById("output");
+     let entre=document.querySelector(" .enter").value;
+     let tab=document.querySelector(".tab").value;
+     let supp=document.querySelector(".backspace");
+     let capslock=document.querySelector(".capslock");
+     let boutons=document.querySelectorAll(".key");
+     boutons.forEach((btn)=>{
+        btn.addEventListener("click",()=>{
+           let texte=btn.innerText;
+        
+      
+
+        })
+     })
+     
+     
+     espace.addEventListener("click",()=>{
+        input.value +=" ";
+     })
+     
+     supp.addEventListener("click", () => {
+        input.value = input.value.slice(0, -1); 
+});
+
+
+const touches = document.querySelectorAll(".key");
+
+let capsOn = false; 
+
+capslock.addEventListener("click", () => {
+  capsOn = !capsOn; 
+  capslock.classList.toggle("active");
+});
+
+touches.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    let lettre = btn.innerText;
+    if (capsOn) {
+      lettre = lettre.toUpperCase();
+    } else {
+      lettre = lettre.toLowerCase();
+    }
+    input.value += lettre;
+  });
+});
+
+
+
+
+
+      </script>
+      
+      
+
+    
+</body>
+</html>
